@@ -25,7 +25,7 @@ int main(void)
                 isMasterCard = true;
                 //printf("\nnumber between 51 and 55 inclusive");
             }
-            else if (test == 34 || test == 37)
+            if (test == 34 || test == 37)
             {
                 isAmericanExpress = true;
                 //printf("\nhas 34 or 37");
