@@ -14,7 +14,7 @@ int main(void)
 {
     long cardNumber = get_long("What is your credit card number?:");
     long test = cardNumber;
-    printf("%ld\n", test);
+    //printf("%ld\n", test);
     while (test >= 10L)
     {
         digits += 1;
@@ -23,12 +23,12 @@ int main(void)
             if (test >= 51 && test <= 55)
             {
                 isMasterCard = true;
-                printf("\nnumber between 51 and 55 inclusive");
+                //printf("\nnumber between 51 and 55 inclusive");
             }
             else if (test == 34 || test == 37)
             {
                 isAmericanExpress = true;
-                printf("\nhas 34 or 37");
+                //printf("\nhas 34 or 37");
             }
         }
         if(isOddDigit == true)
@@ -49,8 +49,8 @@ int main(void)
             test /= 10;
             isOddDigit = true;
         }
-        printf("\ntest value: %ld", test);
-        printf("\nsum: %d", sum);
+        //printf("\ntest value: %ld", test);
+       //printf("\nsum: %d", sum);
     }
     if (isOddDigit == true)
     {
@@ -61,8 +61,8 @@ int main(void)
         sum += test;
     }
     
-    printf("%d digits long", digits);
-    printf("final sum: %d", sum);
+    //printf("%d digits long", digits);
+    //printf("final sum: %d", sum);
     
     if (test == 4)
     {
@@ -83,7 +83,7 @@ int main(void)
             if (digits == 15)
             {
                 isValid = true;
-                printf("\nAMEX");
+                printf("AMEX\n");
             }
         }
     }
@@ -94,7 +94,7 @@ int main(void)
             if (digits == 16)
             {
                 isValid = true;
-                printf("\nMASTERCARD");
+                printf("MASTERCARD\n");
             }
         }
     }
