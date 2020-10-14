@@ -20,7 +20,7 @@ int main(void)
         digits += 1;
         if (test <= 99L)
         {
-            if (test >= 51 && test <= 55)
+            if (test == 51 || test == 52 || test == 53 || test <= 54 || test == 55)
             {
                 isMasterCard = true;
                 //printf("\nnumber between 51 and 55 inclusive");
