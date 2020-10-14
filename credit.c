@@ -23,7 +23,7 @@ int main(void)
             if (test == 51 || test == 52 || test == 53 || test == 54 || test == 55)
             {
                 isMasterCard = true;
-                printf("number between 51 and 55 inclusive\n");
+                //printf("number between 51 and 55 inclusive\n");
             }
             if (test == 34 || test == 37)
             {
@@ -67,8 +67,8 @@ int main(void)
         sum += test;
     }
     
-    printf("%d digits long\n", digits);
-    printf("final sum: %d\n", sum);
+    //printf("%d digits long\n", digits);
+    //printf("final sum: %d\n", sum);
     
     if (test == 4)
     {
