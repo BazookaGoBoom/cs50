@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <cs50.h> 
+#include <string.h>
+#include <math.h>
+
+int main(void)
+{
+    string testString = get_string("Text: ");
+    double totalChars = 0;
+    double totalWords = 1;
+    double totalSentances = 0;
+    for (int x=0; x<strlen(testString); x++)
+    {
+        if ((testString[x] >= 'a' && testString[x] <= 'z') || (testString[x] >= 'A' && testString[x] <= 'Z'))
+        {
+            totalChars = totalChars + 1;
+        }
+        if(testString[x] == ' ')
+        {
+            totalWords = totalWords + 1;
+        }
+        
+        if (testString[x] == '.' || testString[x] == '!' || testString[x] == '?')
+        {
+            totalSentances = totalSentances + 1;
+        }
+    }
+    printf("Total Chars: %f\n", totalChars);
+    printf("Total Words: %f\n", totalWords);
+    printf("Total Sentances: %f\n", totalSentances);
+    double index = (0.0588 * ((totalChars / totalWords) * 100) - 0.296 * ((totalSentances / totalWords) * 100) - 15.8);
+    int grade;
+    grade = round(index);
+    if (grade < 1)
+    {
+        printf("Before Grade 1\n");
+    }
+    else if (grade >= 1 && grade <= 15 )
+    {
+        printf("Grade %d\n", grade);
+    }
+    else if (index >= 16)
+    {
+        printf("Grade 16+\n");
+    }
+    
+}
